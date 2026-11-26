@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>АКСГ — контрольно-сетевой график</title>
+<meta name="description" content="Контрольно-сетевой график строительства железнодорожной инфраструктуры, проект P125 «Центр управления»">
+<meta name="theme-color" content="#d6161c">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23d6161c'/><path d='M8 22V10h7a4 4 0 010 8h-3l5 4' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- экран входа -->
+<div class="gate hide" id="gate">
+  <form class="box" id="gateForm">
+    <div class="logo"><i>АКСГ</i><div><b>Контрольно-сетевой график</b><span>P125 «Центр управления» · ДКСС</span></div></div>
+    <div class="tabs" id="gateTabs">
+      <button type="button" data-g="login" aria-selected="true">Вход</button>
+      <button type="button" data-g="reg" aria-selected="false">Регистрация</button>
+    </div>
+    <div id="gateBody"></div>
+    <div id="gateMsg"></div>
+    <button class="btn pri" id="gateGo" type="submit">Войти</button>
+    <p class="hint" id="gateHint"></p>
+  </form>
+</div>
+
+<!-- приложение -->
+<div class="app hide" id="app">
+  <aside class="nav">
+    <div class="logo"><i>АКСГ</i><div><b>Центр управления</b><span>P125 · ДКСС</span></div></div>
+    <nav class="navlist" id="navlist"></nav>
+    <div class="navfoot">
+      <button class="btn sm" id="themeBtn" type="button">Тема: как в системе</button>
+      <div class="who" id="who"></div>
+      <button class="btn sm" id="exitBtn" type="button">Выйти</button>
+    </div>
+  </aside>
+  <div class="main">
+    <header>
+      <h1 id="title">Дашборд</h1>
+      <div class="state" id="state"><i></i><span>загрузка…</span></div>
+      <button class="btn sm hide" id="bell" type="button" title="Что требует внимания"></button>
+      <label class="field"><span>Отчётная дата</span><input type="date" id="today"></label>
+      <button class="btn pri hide" id="act"></button>
+    </header>
+    <main id="main"></main>
+  </div>
+</div>
+
+<dialog id="dlg"><form method="dialog" class="sheet" id="form"></form></dialog>
+
+<script src="/engine.js"></script>
+<script src="/import-schedule.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

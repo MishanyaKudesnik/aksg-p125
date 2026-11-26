@@ -1,0 +1,11 @@
+{
+  "name":"АКСГ — контрольно-сетевой график",
+  "short_name":"АКСГ",
+  "description":"Контроль хода строительства железнодорожной инфраструктуры, проект P125",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f1f3f5",
+  "theme_color":"#d6161c",
+  "lang":"ru",
+  "icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
